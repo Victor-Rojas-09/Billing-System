@@ -1,6 +1,6 @@
 """
-Módulo: cliente
-Define la clase Cliente.
+Module: cliente.py
+Este modulo implementa la clase Cliente.
 """
 
 from typing import List
@@ -17,7 +17,7 @@ class Cliente:
         self.cedula = cedula
         self._facturas: List[Factura] = []
 
-    # -------------------- PROPIEDADES --------------------
+    #  PROPIEDADES
 
     @property
     def nombre(self) -> str:

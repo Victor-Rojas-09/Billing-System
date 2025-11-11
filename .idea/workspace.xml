@@ -4,8 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5bd48aa-870a-4a0b-85f6-e6e7a33001c6" name="Changes" comment="Project Update">
-      <change beforePath="$PROJECT_DIR$/Model/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/__init__.py" afterDir="false" />
+    <list default="true" id="c5bd48aa-870a-4a0b-85f6-e6e7a33001c6" name="Changes" comment="Updating the packages with the modules used in the directory.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRUD/clientes_crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/clientes_crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRUD/facturas_crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/facturas_crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRUD/productos_crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRUD/productos_crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/antibiotico.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/antibiotico.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/cliente.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/cliente.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/control_plagas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/control_plagas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/factura.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/factura.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/fertilizante.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/fertilizante.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/producto.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/producto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/producto_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/producto_control.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/test_crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/test_crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/test_integration.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/test_integration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/test_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/test_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/vistas.py" beforeDir="false" afterPath="$PROJECT_DIR$/UI/vistas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,12 +115,21 @@
       <option name="project" value="LOCAL" />
       <updated>1762822395757</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Updating the packages with the modules used in the directory.">
+      <option name="closed" value="true" />
+      <created>1762822780924</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1762822780924</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Starting a new python project." />
     <MESSAGE value="Project Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project Update" />
+    <MESSAGE value="Updating the packages with the modules used in the directory." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating the packages with the modules used in the directory." />
   </component>
 </project>

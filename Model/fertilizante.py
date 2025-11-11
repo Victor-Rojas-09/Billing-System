@@ -1,6 +1,6 @@
 """
-Módulo: fertilizante
-Clase para productos del tipo fertilizante.
+Module: fertilizante.py
+Este modulo implementa la clase para productos del tipo fertilizante.
 """
 
 from datetime import date
@@ -12,12 +12,11 @@ class Fertilizante(ProductoControl):
     Modelo de un fertilizante agrícola.
     """
 
-    def __init__(self, registro_ica: str, nombre: str, frecuencia_aplicacion: int,
-                 fecha_ultima_aplicacion: date, precio: float) -> None:
+    def __init__(self, registro_ica: str, nombre: str, frecuencia_aplicacion: int, fecha_ultima_aplicacion: date, precio: float) -> None:
         super().__init__(registro_ica, nombre, frecuencia_aplicacion, precio)
         self.fecha_ultima_aplicacion = fecha_ultima_aplicacion
 
-    # -------------------- PROPIEDADES --------------------
+    #  PROPIEDADES
 
     @property
     def fecha_ultima_aplicacion(self) -> date:
@@ -29,7 +28,7 @@ class Fertilizante(ProductoControl):
             raise ValueError("La fecha de última aplicación debe ser un objeto date válido.")
         self._fecha_ultima_aplicacion = valor
 
-    # -------------------- MÉTODOS --------------------
+    #  METODOS
 
     def __repr__(self) -> str:
         return (

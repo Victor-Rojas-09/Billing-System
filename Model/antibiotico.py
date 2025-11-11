@@ -1,6 +1,6 @@
 """
-Módulo: antibiotico
-Define la clase Antibiotico y la enumeración TipoAnimal.
+Module: antibiotico.py
+Este modulo implementa la clase Antibiotico y la enumeración TipoAnimal.
 """
 
 from enum import Enum
@@ -27,7 +27,7 @@ class Antibiotico(Producto):
         self.dosis = dosis
         self.tipo_animal = tipo_animal
 
-    # -------------------- PROPIEDADES --------------------
+    #  PROPIEDADES
 
     @property
     def dosis(self) -> float:
@@ -51,7 +51,7 @@ class Antibiotico(Producto):
             raise ValueError("El tipo de animal debe ser una instancia de TipoAnimal.")
         self._tipo_animal = valor
 
-    # -------------------- MÉTODOS --------------------
+    #  METODOS
 
     def __repr__(self) -> str:
         return (

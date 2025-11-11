@@ -1,6 +1,6 @@
 """
-Módulo: factura
-Define la clase Factura.
+Module: factura.py
+Este modulo implementa la clase Factura.
 """
 
 from datetime import date
@@ -18,7 +18,7 @@ class Factura:
         self.productos = productos
         self._valor_total = self.calcular_total()
 
-    # -------------------- PROPIEDADES --------------------
+    #  PROPIEDADES
 
     @property
     def fecha(self) -> date:
@@ -46,7 +46,7 @@ class Factura:
     def valor_total(self) -> float:
         return self._valor_total
 
-    # -------------------- MÉTODOS --------------------
+    #  METODOS
 
     def agregar_producto(self, producto: Producto) -> None:
         """

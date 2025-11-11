@@ -4,16 +4,16 @@ Pruebas unitarias del paquete model.
 
 import pytest
 from datetime import date
-from model.producto import Producto
-from model.producto_control import ProductoControl
-from model.control_plagas import ControlPlagas
-from model.fertilizante import Fertilizante
-from model.antibiotico import Antibiotico, TipoAnimal
-from model.factura import Factura
-from model.cliente import Cliente
+from Model.producto import Producto
+from Model.producto_control import ProductoControl
+from Model.control_plagas import ControlPlagas
+from Model.fertilizante import Fertilizante
+from Model.antibiotico import Antibiotico, TipoAnimal
+from Model.factura import Factura
+from Model.cliente import Cliente
 
 
-# ----------------------- PRUEBAS PRODUCTO -----------------------
+#  PRUEBAS PRODUCTO
 
 def test_producto_no_permite_instancia_directa():
     """
@@ -23,7 +23,7 @@ def test_producto_no_permite_instancia_directa():
         Producto("Genérico", 10.0)
 
 
-# ------------------ PRUEBAS PRODUCTO CONTROL ---------------------
+#  PRUEBAS PRODUCTO CONTROL
 
 def test_producto_control_creacion_correcta():
     pc = ProductoControl("ICA123", "Control Base", 15, 100.0)
@@ -38,7 +38,7 @@ def test_producto_control_frecuencia_invalida():
         ProductoControl("ICA999", "Control", -5, 100.0)
 
 
-# --------------------- PRUEBAS CONTROL DE PLAGAS ------------------
+#  PRUEBAS CONTROL DE PLAGAS
 
 def test_control_plagas_creacion():
     p = ControlPlagas("ICA111", "Plagas X", 30, 20, 80.0)
@@ -50,7 +50,7 @@ def test_control_plagas_carencia_invalida():
         ControlPlagas("ICA111", "Plagas X", 30, -1, 80.0)
 
 
-# --------------------- PRUEBAS FERTILIZANTE -----------------------
+#  PRUEBAS FERTILIZANTE
 
 def test_fertilizante_creacion():
     f = Fertilizante("ICA222", "Ferti Y", 45, date.today(), 50.0)
@@ -58,7 +58,7 @@ def test_fertilizante_creacion():
     assert isinstance(f.fecha_ultima_aplicacion, date)
 
 
-# ---------------------- PRUEBAS ANTIBIOTICO -----------------------
+#  PRUEBAS ANTIBIOTICO
 
 def test_antibiotico_creacion_correcta():
     a = Antibiotico("Antibio", 450, TipoAnimal.BOVINO, 120.0)
@@ -76,7 +76,7 @@ def test_antibiotico_tipo_incorrecto():
         Antibiotico("Antibio", 450, "PERRO", 100.0)
 
 
-# --------------------------- PRUEBAS FACTURA ----------------------
+#  PRUEBAS FACTURA
 
 def test_factura_calcula_total():
     p1 = ControlPlagas("ICA111", "PlagaX", 20, 10, 30.0)
@@ -95,7 +95,7 @@ def test_factura_agregar_producto():
     assert f.valor_total == 40.0
 
 
-# ----------------------------- PRUEBAS CLIENTE ---------------------
+#  PRUEBAS CLIENTE
 
 def test_cliente_agregar_factura():
     c = Cliente("Juan", "123")

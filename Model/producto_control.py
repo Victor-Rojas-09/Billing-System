@@ -1,6 +1,6 @@
 """
-Módulo: producto_control
-Clase intermedia para los productos de control agrícola.
+Module: producto_control.py
+Este modulo implementa la clase intermedia para los productos de control agrícola.
 """
 
 from .producto import Producto
@@ -17,7 +17,7 @@ class ProductoControl(Producto):
         self.registro_ica = registro_ica
         self.frecuencia_aplicacion = frecuencia_aplicacion
 
-    # -------------------- PROPIEDADES --------------------
+    #  PROPIEDADES
 
     @property
     def registro_ica(self) -> str:
@@ -39,7 +39,7 @@ class ProductoControl(Producto):
             raise ValueError("La frecuencia de aplicación debe ser un número entero positivo.")
         self._frecuencia_aplicacion = valor
 
-    # -------------------- MÉTODOS --------------------
+    #  METODOS
 
     def __repr__(self) -> str:
         return (

@@ -1,6 +1,6 @@
 """
-Módulo: producto
-Clase base abstracta para todos los productos del sistema.
+Module: producto.py
+Este modulo implementa la clase base abstracta para todos los productos del sistema.
 """
 
 from abc import ABC, abstractmethod
@@ -18,7 +18,7 @@ class Producto(ABC):
         self.nombre = nombre
         self.precio = precio
 
-    # -------------------- PROPIEDADES --------------------
+    #  PROPIEDADES
 
     @property
     def id(self) -> str:
@@ -45,9 +45,9 @@ class Producto(ABC):
             raise ValueError("El precio debe ser un número mayor que cero.")
         self._precio = float(valor)
 
-    # -------------------- MÉTODOS --------------------
+    #  METODOS
 
     @abstractmethod
     def __repr__(self) -> str:
-        """Representación legible del producto."""
+        #Representación legible del producto.
         pass

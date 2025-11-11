@@ -1,16 +1,16 @@
 """
-Módulo: vistas
+Module: vistas.py
 Contiene funciones que muestran información al usuario.
 No incluye ninguna lógica de negocio ni lógica CRUD.
 """
 
 from typing import List
-from model.cliente import Cliente
-from model.factura import Factura
-from model.producto import Producto
+from Model.cliente import Cliente
+from Model.factura import Factura
+from Model.producto import Producto
 
 
-# ---------------------- VISTAS DE CLIENTES ----------------------
+#  VISTAS DE CLIENTES
 
 def mostrar_cliente(cliente: Cliente) -> None:
     """
@@ -35,7 +35,7 @@ def mostrar_lista_clientes(clientes: List[Cliente]) -> None:
         print(f"- {c.nombre} (Cédula: {c.cedula}) — Facturas: {len(c.facturas)}")
 
 
-# ---------------------- VISTAS DE PRODUCTOS ----------------------
+#  VISTAS DE PRODUCTOS
 
 def mostrar_producto(producto: Producto) -> None:
     """
@@ -58,7 +58,7 @@ def mostrar_lista_productos(productos: List[Producto]) -> None:
         print(f"- {repr(p)}")
 
 
-# ---------------------- VISTAS DE FACTURAS ----------------------
+#  VISTAS DE FACTURAS
 
 def mostrar_factura(factura: Factura) -> None:
     """

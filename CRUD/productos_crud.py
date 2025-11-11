@@ -1,44 +1,67 @@
 """
-Módulo: facturas_crud
-Administra la creación y consulta de facturas.
+Module: productos_crud.py
+Administra el registro, consulta y eliminación de productos en memoria.
 """
 
 from typing import Dict, List, Optional
-from datetime import date
-from model.factura import Factura
-from model.producto import Producto
+from Model.producto import Producto
 
-# Almacenamiento en memoria
-_facturas: Dict[int, Factura] = {}
-_contador_facturas = 1
+# Almacenamiento en memoria: map id -> Producto
+_productos: Dict[str, Producto] = {}
 
 
-# ------------------ CRUD DE FACTURAS ------------------
-
-def crear_factura(fecha: date, productos: List[Producto]) -> Factura:
+def registrar_producto(producto: Producto) -> None:
     """
-    Crea una factura nueva y la almacena.
+    Registra un producto en el sistema en memoria.
+    Lanza ValueError si ya existe un producto con el mismo id.
     """
-    global _contador_facturas
+    if not isinstance(producto, Producto):
+        raise TypeError("Se debe proporcionar una instancia de Producto.")
 
-    factura = Factura(fecha, productos)
-    factura_id = _contador_facturas
+    if producto.id in _productos:
+        raise ValueError(f"Ya existe un producto con ID {producto.id}")
 
-    _facturas[factura_id] = factura
-    _contador_facturas += 1
-
-    return factura
+    _productos[producto.id] = producto
 
 
-def obtener_factura(id_factura: int) -> Optional[Factura]:
+def obtener_producto(id_producto: str) -> Optional[Producto]:
     """
-    Obtiene una factura por su ID.
+    Devuelve el producto con el id especificado, o None si no existe.
     """
-    return _facturas.get(id_factura)
+    if not isinstance(id_producto, str):
+        raise TypeError("El id del producto debe ser una cadena.")
+    return _productos.get(id_producto)
 
 
-def listar_facturas() -> List[Factura]:
+def listar_productos() -> List[Producto]:
     """
-    Retorna todas las facturas registradas.
+    Retorna la lista de todos los productos registrados.
     """
-    return list(_facturas.values())
+    return list(_productos.values())
+
+
+def eliminar_producto(id_producto: str) -> None:
+    """
+    Elimina el producto con el id dado. Lanza ValueError si no existe.
+    """
+    if not isinstance(id_producto, str):
+        raise TypeError("El id del producto debe ser una cadena.")
+
+    if id_producto not in _productos:
+        raise ValueError(f"No existe un producto con ID {id_producto}")
+
+    del _productos[id_producto]
+
+
+def actualizar_producto(producto: Producto) -> None:
+    """
+    Actualiza un producto existente (reemplaza por id).
+    Lanza ValueError si no existe previamente.
+    """
+    if not isinstance(producto, Producto):
+        raise TypeError("Se debe proporcionar una instancia de Producto.")
+
+    if producto.id not in _productos:
+        raise ValueError(f"No existe un producto con ID {producto.id} para actualizar.")
+
+    _productos[producto.id] = producto

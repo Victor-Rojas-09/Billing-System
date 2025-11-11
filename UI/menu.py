@@ -1,12 +1,12 @@
 """
-Módulo: menu
-Contiene el menú principal del sistema y las opciones de interacción.
+Module: menu.py
+Este modulo contiene el sistema y las opciones de interacción.
 """
 
 from datetime import date
 
 # Importar CRUD
-from crud.clientes_crud import (
+from CRUD.clientes_crud import (
     crear_cliente,
     obtener_cliente,
     listar_clientes,
@@ -14,16 +14,16 @@ from crud.clientes_crud import (
     buscar_por_cedula
 )
 
-from crud.productos_crud import (
+from CRUD.productos_crud import (
     registrar_producto,
     listar_productos,
     obtener_producto
 )
 
-from crud.facturas_crud import crear_factura, listar_facturas
+from CRUD.facturas_crud import crear_factura, listar_facturas
 
 # Importar vistas
-from ui.vistas import (
+from UI.vistas import (
     mostrar_cliente,
     mostrar_lista_clientes,
     mostrar_producto,
@@ -33,17 +33,15 @@ from ui.vistas import (
 )
 
 # Importar modelos para creación manual
-from model.control_plagas import ControlPlagas
-from model.fertilizante import Fertilizante
-from model.antibiotico import Antibiotico, TipoAnimal
+from Model.control_plagas import ControlPlagas
+from Model.fertilizante import Fertilizante
+from Model.antibiotico import Antibiotico, TipoAnimal
 
 
-# ----------------------------------------------------------------------
-# ---------------------------- MENÚ PRINCIPAL ---------------------------
-# ----------------------------------------------------------------------
+#  MENU PRINCIPAL
 
 def mostrar_menu() -> None:
-    print("\n========== SISTEMA DE FACTURACIÓN AGRÍCOLA ==========")
+    print("\n========== SISTEMA DE FACTURACION AGRICOLA ==========")
     print("1. Registrar cliente")
     print("2. Registrar producto")
     print("3. Crear factura")
@@ -97,9 +95,8 @@ def iniciar_menu() -> None:
             print("Opción no válida. Intente de nuevo.")
 
 
-# ----------------------------------------------------------------------
-# ------------------------- FUNCIONES DE UI ----------------------------
-# ----------------------------------------------------------------------
+
+#  FUNCIONES DE UI
 
 def registrar_cliente_ui() -> None:
     nombre = input("Nombre del cliente: ")

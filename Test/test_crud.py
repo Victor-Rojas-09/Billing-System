@@ -5,19 +5,19 @@ Pruebas unitarias del directorio CRUD.
 import pytest
 from datetime import date
 
-from crud.clientes_crud import (
+from CRUD.clientes_crud import (
     crear_cliente, obtener_cliente, actualizar_cliente, eliminar_cliente,
     agregar_factura_a_cliente, buscar_por_cedula
 )
 
-from crud.productos_crud import registrar_producto, obtener_producto
-from crud.facturas_crud import crear_factura
+from CRUD.productos_crud import registrar_producto, obtener_producto
+from CRUD.facturas_crud import crear_factura
 
-from model.control_plagas import ControlPlagas
-from model.factura import Factura
+from Model.control_plagas import ControlPlagas
+from Model.factura import Factura
 
 
-# ------------------- CRUD CLIENTES -------------------
+#  CRUD CLIENTES
 
 def test_crear_y_obtener_cliente():
     crear_cliente("Luis", "999")
@@ -44,7 +44,7 @@ def test_eliminar_cliente():
     assert obtener_cliente("666") is None
 
 
-# ------------------ CRUD PRODUCTOS -------------------
+#  CRUD PRODUCTOS
 
 def test_registrar_producto():
     p = ControlPlagas("ICA123", "PlagaTest", 10, 5, 25.0)
@@ -52,7 +52,7 @@ def test_registrar_producto():
     assert obtener_producto(p.id) == p
 
 
-# -------------------- CRUD FACTURAS -------------------
+#  CRUD FACTURAS
 
 def test_crear_factura():
     p = ControlPlagas("ICA321", "Producto X", 10, 5, 10.0)
@@ -61,7 +61,7 @@ def test_crear_factura():
     assert f.valor_total == 10.0
 
 
-# ---------------- ESPECIAL: buscar_por_cedula -------------------
+#  Buscar por cedula
 
 def test_buscar_por_cedula():
     # Crear cliente y factura asociada

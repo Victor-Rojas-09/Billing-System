@@ -1,18 +1,17 @@
 """
-Módulo: clientes_crud
+Module: clientes_crud.py
 Contiene las operaciones CRUD para clientes del sistema.
 La persistencia se maneja en memoria mediante un diccionario.
 """
 
 from typing import Dict, List, Optional
-from model.cliente import Cliente
-from model.factura import Factura
+from Model.cliente import Cliente
+from Model.factura import Factura
 
 # Base de datos en memoria
 _clientes: Dict[str, Cliente] = {}
 
-
-# ------------------ CRUD DE CLIENTES ------------------
+#  CLIENTES
 
 def crear_cliente(nombre: str, cedula: str) -> Cliente:
     """
@@ -56,8 +55,7 @@ def eliminar_cliente(cedula: str) -> None:
 
     del _clientes[cedula]
 
-
-# ------------------ OPERACIONES ESPECIALES ------------------
+#  OPERACIONES ESPECIALES
 
 def agregar_factura_a_cliente(cedula: str, factura: Factura) -> None:
     """
@@ -81,8 +79,7 @@ def buscar_por_cedula(cedula: str) -> List[Factura]:
 
     return cliente.listar_facturas()
 
-
-# ------------------ UTILIDADES ------------------
+#  UTILIDADES
 
 def listar_clientes() -> List[Cliente]:
     """

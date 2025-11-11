@@ -1,6 +1,6 @@
 """
-Módulo: control_plagas
-Clase para productos de control de plagas.
+Module: control_plagas.py
+Este modulo implementa la clase para productos de control de plagas.
 """
 
 from .producto_control import ProductoControl
@@ -11,12 +11,11 @@ class ControlPlagas(ProductoControl):
     Modelo de un producto para control de plagas.
     """
 
-    def __init__(self, registro_ica: str, nombre: str, frecuencia_aplicacion: int,
-                 periodo_de_carencia: int, precio: float) -> None:
+    def __init__(self, registro_ica: str, nombre: str, frecuencia_aplicacion: int, periodo_de_carencia: int, precio: float) -> None:
         super().__init__(registro_ica, nombre, frecuencia_aplicacion, precio)
         self.periodo_de_carencia = periodo_de_carencia
 
-    # -------------------- PROPIEDADES --------------------
+    #  PROPIEDADES
 
     @property
     def periodo_de_carencia(self) -> int:
@@ -28,7 +27,7 @@ class ControlPlagas(ProductoControl):
             raise ValueError("El periodo de carencia debe ser un número entero mayor o igual a 0.")
         self._periodo_de_carencia = valor
 
-    # -------------------- MÉTODOS --------------------
+    #  METODOS
 
     def __repr__(self) -> str:
         return (

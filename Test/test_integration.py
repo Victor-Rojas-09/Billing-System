@@ -4,12 +4,12 @@ Pruebas de integración del sistema completo.
 
 from datetime import date
 
-from crud.clientes_crud import crear_cliente, agregar_factura_a_cliente, buscar_por_cedula
-from crud.productos_crud import registrar_producto
-from crud.facturas_crud import crear_factura
+from CRUD.clientes_crud import crear_cliente, agregar_factura_a_cliente, buscar_por_cedula
+from CRUD.productos_crud import registrar_producto
+from CRUD.facturas_crud import crear_factura
 
-from model.control_plagas import ControlPlagas
-from model.antibiotico import Antibiotico, TipoAnimal
+from Model.control_plagas import ControlPlagas
+from Model.antibiotico import Antibiotico, TipoAnimal
 
 
 def test_flujo_completo_cliente_producto_factura():

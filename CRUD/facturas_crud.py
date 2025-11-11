@@ -1,19 +1,18 @@
 """
-Módulo: facturas_crud
+Module: facturas_crud.py
 Administra la creación y consulta de facturas.
 """
 
 from typing import Dict, List, Optional
 from datetime import date
-from model.factura import Factura
-from model.producto import Producto
+from Model.factura import Factura
+from Model.producto import Producto
 
 # Almacenamiento en memoria
 _facturas: Dict[int, Factura] = {}
 _contador_facturas = 1
 
-
-# ------------------ CRUD DE FACTURAS ------------------
+#  CRUD DE FACTURAS
 
 def crear_factura(fecha: date, productos: List[Producto]) -> Factura:
     """
