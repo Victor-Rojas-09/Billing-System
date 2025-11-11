@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5bd48aa-870a-4a0b-85f6-e6e7a33001c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/PythonProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CRUD/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="c5bd48aa-870a-4a0b-85f6-e6e7a33001c6" name="Changes" comment="Starting a new python project.">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD/clientes_crud.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD/productos_crud.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/antibiotico.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/cliente.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/control_plagas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/factura.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/fertilizante.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/producto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/producto_control.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +32,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Victor-Rojas-09"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Victor-Rojas-09/Billing-System.git",
+    "accountId": "6b9dbf51-8246-4bbb-b15d-4f85ed31b94c"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 4
 }]]></component>
@@ -43,6 +56,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master"
   }
@@ -62,6 +76,19 @@
       <option name="presentableId" value="Default" />
       <updated>1762815340904</updated>
     </task>
+    <task id="LOCAL-00001" summary="Starting a new python project.">
+      <option name="closed" value="true" />
+      <created>1762817545084</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762817545084</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Starting a new python project." />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting a new python project." />
   </component>
 </project>
